@@ -17,7 +17,7 @@ local o = vim.o
     o.scrolloff = 8
 
 -- Some basics:
-    vim.keymap.set('n', 'c', '"_c')
+    -- vim.keymap.set('n', 'c', '"_c')
     o.compatible = false
     vim.cmd('syntax on')
     vim.cmd('filetype plugin indent on')
@@ -32,7 +32,7 @@ local o = vim.o
 -- Better editor UI
     o.title = true
     o.background = 'dark'
-    o.go = 'a'
+    -- o.go = 'a'
     o.mouse = 'a'
     o.hlsearch = true
     o.linebreak = true
@@ -52,7 +52,7 @@ local o = vim.o
     o.list = true
     -- o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂'
     -- for 4 spaces indentations
-        o.listchars = 'eol:¬,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:···⬝,leadmultispace:│   ,'
+        -- o.listchars = 'eol:¬,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:···⬝,leadmultispace:│   ,'
     -- for 2 spaces indentations
         -- o.listchars = 'eol:¬,space:·,lead: ,trail:·,nbsp:◇,tab:→-,extends:▸,precedes:◂,multispace:··,leadmultispace:│ ,'
     o.formatoptions = 'qrn1'
@@ -87,10 +87,10 @@ local o = vim.o
     o.splitbelow = true
 
 -- Preserve view while jumping
-    o.jumpoptions = 'view'
+    -- o.jumpoptions = 'view'
 
 -- Stable buffer content on window open/close events.
-    o.splitkeep = 'screen'
+    -- o.splitkeep = 'screen'
 
 -- Improve diff
     -- vim.opt.diffopt:append('linematch:60')

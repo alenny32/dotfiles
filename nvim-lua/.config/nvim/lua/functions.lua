@@ -17,7 +17,7 @@ function ToggleHiddenAll()
         o.showcmd = false
     end
 end
-vim.keymap.set({'n', 'v', 'o'}, '<leader>h', ToggleHiddenAll)
+vim.cmd('map <leader>h <CMD>call ToggleHiddenAll()<CR>')
 
 -- Function for cycling themes (onedark, dracula):
 local theme = 0
@@ -42,4 +42,4 @@ function CycleThemes()
         theme = 0
     end
 end
-vim.keymap.set({'n', 'v', 'o'}, '<leader>tt', CycleThemes)
+vim.cmd('map <leader>tt <CMD>call CycleThemes()<CR>')

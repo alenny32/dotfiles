@@ -12,3 +12,5 @@ else
     require("plugins")          -- Vim-Plug auto installer
     CycleThemes()
 end
+
+-- vim.cmd('source $XDG_CONFIG_HOME/nvim/themes/onedark.vim')

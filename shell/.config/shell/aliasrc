@@ -88,8 +88,8 @@ alias \
 # Common commands with certain options
 alias \
     la="ls -A" \
-    lla="ll -Al" \
-    lla="ll -al" \
+    ll="ls -Al" \
+    lla="ls -Al" \
     lsd="ls -D" \
     pin="pacman -S" \
     pup="pacman -Syu" \

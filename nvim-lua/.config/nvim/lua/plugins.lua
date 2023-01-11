@@ -29,13 +29,13 @@ vim.cmd([[ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nv
 vim.cmd([[ call plug#end() ]])
 
 -- Plugins (configuration):
-local nvo = {'n', 'v', 'o'}
-local function map(mode, key, value)
-    vim.keymap.set(mode, key, value, { remap = true, silent = false })
-end
+-- local nvo = {'n', 'v', 'o'}
+-- local function map(mode, key, value)
+--     vim.keymap.set(mode, key, value, { remap = true, silent = false })
+-- end
 
 -- Goyo plugin makes text more readable when writing prose:
-    map(nvo, '<leader>f', '<CMD>Goyo | set bg=light | set linebreak<CR>')
+    -- vim.cmd("map <leader>f <CMD>Goyo | set bg=light | set linebreak<CR>")
 
 -- Enable Goyo by default for mutt writing:
 vim.cmd([[
@@ -46,7 +46,7 @@ vim.cmd([[
 ]])
 
 -- Nerd tree:
-    map(nvo, '<leader>n', '<CMD>NERDTreeToggle<CR>')
+    vim.cmd('map <leader>n <CMD>NERDTreeToggle<CR>')
     vim.cmd('autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif')
     vim.cmd([[
         if has('nvim')
@@ -57,11 +57,11 @@ vim.cmd([[
     ]])
 
 -- vimling:
-    map(nvo, '<leader>d', '<CMD>call ToggleDeadKeys()<CR>')
-    map('i', '<leader>d <ESC>', '<CMD>call ToggleDeadKeys()<CR>a')
-    map(nvo, '<leader>i', '<CMD>call ToggleIPA()<CR>')
-    map('i', '<leader>i <ESC>', '<CMD>call ToggleIPA()<CR>a')
-    map (nvo, '<leader>q', '<CMD>call ToggleProse()<CR>')
+    vim.cmd('map <leader>d <CMD>call ToggleDeadKeys()<CR>')
+    vim.cmd('imap <CMD>call ToggleDeadKeys()<CR>a')
+    vim.cmd('map <leader>i <CMD>call ToggleIPA()<CR>')
+    vim.cmd('imap <CMD>call ToggleIPA()<CR>a')
+    vim.cmd('map <leader>q <CMD>call ToggleProse()<CR>')
 
 -- VimTeX:
     vim.g.vimtex_view_method = 'zathura'
