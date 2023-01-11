@@ -2,7 +2,7 @@
 
 # Umar's config for aliases in zsh
 
-chusr="doas"
+chusr="sudo"
 
 # Go into directory
 alias \
@@ -77,10 +77,18 @@ alias \
     df="df -h" \
     du="du -h" \
 
+# Apt package manager
+alias \
+    aptupd="$chusr apt update" \
+    aptupg="$chusr apt update && $chusr apt upgrade" \
+    aptin="$chusr apt install" \
+    aptrm="$chusr apt remove" \
+    aptpg="$chusr apt purge" \
+
 # Common commands with certain options
 alias \
-    la="ls -a" \
-    ll="ls -l" \
+    la="ls -A" \
+    lla="ll -Al" \
     lla="ll -al" \
     lsd="ls -D" \
     pin="pacman -S" \
@@ -91,11 +99,9 @@ alias \
     pqq="pacman -Qq" \
     prm="pacman -R" \
     prns="pacman -Rns" \
-    # la="ls -A" \ # not supported by exa
-    # lla="ll -Al" \ # not supported by exa
 
 # $chusr not required for some system commands
-for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
+for command in apt mount umount sv pacman updatedb su shutdown poweroff reboot ; do
     alias $command="$chusr $command"
 done; unset command
 
@@ -121,12 +127,11 @@ alias \
 
 # Colorize commands when possible.
 alias \
-    ls="exa --icons -h --color=auto --group-directories-first" \
+    ls="ls -h --color=auto --group-directories-first" \
     grep="grep --color=auto" \
     diff="diff --color=auto" \
     ccat="highlight --out-format=ansi" \
     ip="ip -color=auto"
-    # ls="exa -hN --color=auto --group-directories-first" \
 
 # These common commands are just too long! Abbreviate them.
 alias \

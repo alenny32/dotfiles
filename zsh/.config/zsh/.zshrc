@@ -14,11 +14,6 @@ mkcd() {
 	cd "$1"
 }
 
-# Config used for virtualenvwrapper
-export WORKON_HOME=$HOME/Workspace/.virtualenvs
-export PROJECT_HOME=$HOME/Workspace
-source /usr/bin/virtualenvwrapper.sh
-
 # Set case insensitive for auto-complete
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
