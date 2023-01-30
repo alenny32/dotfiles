@@ -18,6 +18,9 @@ mkcd() {
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+# Load nix package manager environment variables
+. /home/umar/.nix-profile/etc/profile.d/nix.sh
+
 ######################################################################
 
 # Enable colors and change prompt:

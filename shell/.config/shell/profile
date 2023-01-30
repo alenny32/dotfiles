@@ -113,6 +113,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1 # Fix for Java applications in dwm
 # Switch escape and caps if tty and no passwd required:
 doas loadkeys $HOME/.local/bin/ttymaps.kmap 2>/dev/null
 
-export NVM_DIR="$HOME/.config/nvm"
+# NVM for Node.js in wsl
+[ "$(command -v nvm)" ] && export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
